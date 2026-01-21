@@ -1,0 +1,23 @@
+[
+  {
+    "email": "server00brazil@gmail.com",
+    "username": "EDICT .",
+    "provider": "microsoft",
+    "timestamp": "2026-01-20T09:40:42.243Z",
+    "action": "signup"
+  },
+  {
+    "email": "edict904@gmail.com",
+    "username": "Edict",
+    "provider": "google",
+    "timestamp": "2026-01-20T09:41:08.321Z",
+    "action": "signup"
+  },
+  {
+    "email": "edict904@gmail.com",
+    "username": "Edict",
+    "provider": "google",
+    "timestamp": "2026-01-20T09:41:36.918Z",
+    "action": "login"
+  }
+]

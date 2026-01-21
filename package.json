@@ -1,0 +1,30 @@
+{
+  "name": "simple-login-page",
+  "version": "1.0.0",
+  "description": "This is a simple user login page created using HTML, CSS, and JavaScript. You can use this login page as a template to get started with user authentication on your website. Below, we'll explain how to use and customize this login page for your needs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awkward-py/Simple-Login-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/awkward-py/Simple-Login-Page/issues"
+  },
+  "homepage": "https://github.com/awkward-py/Simple-Login-Page#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "passport": "^0.7.0",
+    "passport-azure-ad": "^4.3.5",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-microsoft": "^2.1.0"
+  }
+}

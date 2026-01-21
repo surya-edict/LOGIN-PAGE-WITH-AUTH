@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>User Login</title>
 </head>
+
 <body>
     <div class="container">
 
@@ -25,6 +27,16 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
+
+            <div class="separator">OR</div>
+
+            <a href="/auth/google" class="btn btn-google btn-block"
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">Login
+                with Google</a>
+            <a href="/auth/microsoft" class="btn btn-microsoft btn-block" id="microsoftLoginBtn"
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">Login
+                with Microsoft</a>
+
             <p class="text-center mt-2">Don't have an account? <a href="#" id="toggle-signup">Sign Up</a></p>
         </div>
         <div class="signup-form" style="display: none;">
@@ -34,18 +46,35 @@
             <form id="signupForm">
 
                 <div class="form-group">
-                    
                     <input type="text" id="newUsername" class="form-control" placeholder="Choose a username" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="newPassword" class="form-control" placeholder="Choose a password" required>
+                    <input type="email" id="newEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="newPassword" class="form-control" placeholder="Choose a password"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password"
+                        required>
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Sign Up</button>
             </form>
+
+            <div class="separator">OR</div>
+
+            <a href="/auth/google" class="btn btn-google btn-block"
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">Sign
+                Up with Google</a>
+            <a href="/auth/microsoft" class="btn btn-microsoft btn-block"
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">Sign
+                Up with Microsoft</a>
             <p class="text-center mt-2">Already have an account? <a href="#" id="toggle-login">Login</a></p>
         </div>
     </div>
 
     <script src="./login.js"></script>
 </body>
+
 </html>

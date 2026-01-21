@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-success" id="welcome-title">Login Successful!</h1>
+        <p class="lead" id="welcome-message">Welcome to your dashboard.</p>
+        <a href="/logout" class="btn btn-primary">Logout</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        const title = document.getElementById('welcome-title');
+        const message = document.getElementById('welcome-message');
+
+        if (type === 'signup') {
+            title.innerText = 'Account Created Successfully!';
+            title.className = 'text-primary'; // Blue for new account
+            message.innerText = 'Thanks for joining us! We are excited to have you.';
+        } else if (type === 'login') {
+            title.innerText = 'Welcome Back!';
+            title.className = 'text-success';
+            message.innerText = 'It\'s good to see you again.';
+        }
+    </script>
+</body>
+
+</html>

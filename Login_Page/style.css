@@ -9,7 +9,8 @@ body {
     margin-top: 100px;
 }
 
-.login-form, .signup-form {
+.login-form,
+.signup-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,24 +18,37 @@ body {
     padding: 20px;
     border-radius: 5px;
     background: white;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-form h1, .signup-form h1 {
+.login-form form,
+.signup-form form,
+.separator {
+    width: 100%;
+}
+
+.login-form h1,
+.signup-form h1 {
     color: #007bff;
 }
 
-.login-form p, .signup-form p {
+.login-form p,
+.signup-form p {
     font-size: 16px;
 }
 
-#toggle-signup, #toggle-login {
+#toggle-signup,
+#toggle-login {
     color: #007bff;
     text-decoration: none;
     cursor: pointer;
 }
 
-#toggle-signup:hover, #toggle-login:hover {
+#toggle-signup:hover,
+#toggle-login:hover {
     text-decoration: underline;
 }
 
@@ -43,4 +57,46 @@ body {
     .container {
         max-width: 100%;
     }
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.btn-google {
+    background-color: #db4437;
+    color: white;
+}
+
+.btn-google:hover {
+    background-color: #c53929;
+    color: white;
+}
+
+.btn-microsoft {
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.btn-microsoft:hover {
+    background-color: #1a1a1a;
+    color: white;
 }

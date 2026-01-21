@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Debug Test</title>
+</head>
+
+<body>
+    <h1>Microsoft OAuth Debug</h1>
+    <button id="testBtn">Test Server Connection</button>
+    <button id="msBtn">Go to Microsoft OAuth</button>
+    <div id="output" style="margin-top: 20px; padding: 10px; background: #f0f0f0;">
+        <h3>Debug Output:</h3>
+        <pre id="log"></pre>
+    </div>
+
+    <script>
+        const log = document.getElementById('log');
+
+        function addLog(message) {
+            log.textContent += new Date().toLocaleTimeString() + ': ' + message + '\n';
+        }
+
+        document.getElementById('testBtn').addEventListener('click', async () => {
+            addLog('Testing server connection to /test...');
+            try {
+                const response = await fetch('/test');
+                const text = await response.text();
+                addLog('✅ Server responded: ' + text);
+            } catch (error) {
+                addLog('❌ Error: ' + error.message);
+            }
+        });
+
+        document.getElementById('msBtn').addEventListener('click', () => {
+            addLog('Redirecting to /auth/microsoft...');
+            window.location.href = '/auth/microsoft';
+        });
+
+        addLog('Page loaded. Click buttons to test.');
+    </script>
+</body>
+
+</html>
